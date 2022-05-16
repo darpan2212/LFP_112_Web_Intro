@@ -1,0 +1,59 @@
+body{
+    padding: 2em;
+}
+
+.headerContainer{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: tomato;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.footerContainer{
+    display: flex;
+    background-color: lightgreen;
+    flex-flow: column wrap;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.mainContainer{
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mainContentItem{
+    text-align: left;
+    background-color: deepskyblue;
+    order: 2;
+    flex: 3 0px;
+}
+
+.sideBarLeft{
+    order: 1;
+    background-color: gold;
+}
+
+.sideBarRight{
+    order: 3;
+    background-color: hotpink;
+}
+
+.sideBarItem{
+    flex: 1 0 0;
+}
+
+article{
+    margin: 10px;
+    background-color: aqua;
+    padding: 10px;
+}
+
+h1{
+    background-color: aqua;
+}

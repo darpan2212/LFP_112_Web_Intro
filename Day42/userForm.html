@@ -1,0 +1,120 @@
+<html>
+
+<head>
+
+    <title> User Registration form </title>
+
+    <link href="css/userForm.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="headerContent">
+        <h1> HTML5 Form Input Fields </h1>
+    </header>
+    <form>
+
+        <div>
+            <label for="txtName">type your name :</label>
+            <input type="text" id="txtName" name="txtName" />
+            <error-output id="nameError"></error-output>
+            <ok-output id="nameOk"></ok-output>
+        </div>
+
+        <div>
+            <label for="pwd">type your password :</label>
+            <input type="password" id="pwd" name="pwd" />
+        </div>
+
+        <div>
+            <label for="mail">type your email :</label>
+            <input type="email" id="mail" name="mail" />
+        </div>
+
+        <div>
+            <label for="website">type your url :</label>
+            <input type="url" id="website" name="website" />
+        </div>
+
+        <div>
+            <label for="num">number input type :</label>
+            <input type="number" id="num" name="num" />
+        </div>
+
+        <div>
+            <label for="telephone">tel input type :</label>
+            <input type="tel" id="telephone" name="telephone" />
+        </div>
+
+        <div>
+            <label for="search">search aything :</label>
+            <input type="search" id="search" name="search" />
+        </div>
+
+        <div>
+            <label for="date">Choose a date and time :</label>
+            <input type="datetime-local" id="date" name="date" />
+        </div>
+
+        <div>
+            <label for="salary">Salary :</label>
+            <input type="range" id="salary" name="salary" min="20000" max="100000" value="50000" />
+            <output id="salaryOp"></output>
+        </div>
+
+        <div>
+            <input type="submit" />
+        </div>
+
+    </form>
+    <div>
+        <input type="button" value="Click here" onclick="countRabbits()" />
+    </div>
+
+    <div>
+        <input type="button" value="Count Rabbits" id="elem" />
+    </div>
+
+
+    <script>
+
+        function countRabbits(){
+            for(let i=1;i<3;i++){
+                alert("Rabit "+i);
+            }
+        }
+
+        elem.onclick = countRabbits;
+
+        var txtName=document.getElementById("txtName");
+        var nameError = document.getElementById("nameError");
+        var nameOk = document.getElementById("nameOk");
+
+        txtName.addEventListener('input',verifyName);
+        
+        function verifyName(e) {
+
+            let regex = RegExp("^[A-Z]{1}[a-z]{3,}$");
+
+            if(!regex.test(e.target.value)) {
+                nameError.textContent = "Name is incorrect";
+                nameOk.textContent="";
+            } else {
+                nameOk.textContent = "Name is correct";
+                nameError.textContent = "";
+            }
+        }
+        
+        var salaryRange= document.getElementById("salary");
+        var salaryOp = document.getElementById("salaryOp");
+
+        salaryRange.addEventListener('input',onSalaryChange);
+
+        function onSalaryChange(e) {
+            salaryOp.textContent = e.target.value;
+        }
+    </script>
+
+</body>
+
+</html>

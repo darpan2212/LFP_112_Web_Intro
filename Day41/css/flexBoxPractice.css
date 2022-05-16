@@ -1,0 +1,46 @@
+.mainContainer{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.div1{
+    background-color: aqua;
+    height: 200px;
+    flex: 1;
+}
+
+.div2{
+    background-color: brown;
+    height: 200px;
+    flex: 1;
+}
+
+.div3{
+    background-color: blueviolet;
+    height: 200px;
+    flex: 2;
+}
+
+.div4{
+    background-color: pink;
+    height: 200px;
+    flex: 1;
+}
+
+.div5{
+    background-color: blue;
+    height: 200px;
+    flex: 2;
+}
+
+.div6{
+    background-color: red;
+    height: 200px;
+    flex: 1;
+}
+
+.div7{
+    background-color: green;
+    height: 200px;
+    flex: 1;
+}

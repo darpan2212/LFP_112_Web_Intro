@@ -1,0 +1,42 @@
+.headerContent{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    background-color: tomato;
+}
+
+body{
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 2em;
+}
+
+label{
+    text-align: right;
+    margin-right: 2%;
+    width: 30%;
+}
+
+form{
+    margin-top: 50px;
+}
+
+div{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input{
+    flex: auto;
+}
+
+error-output{
+    color: red;
+}
+
+ok-output{
+    color: green;
+}
