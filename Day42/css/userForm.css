@@ -40,3 +40,11 @@ error-output{
 ok-output{
     color: green;
 }
+
+
+@media only screen and (min-device-width:600px) and (max-device-width:800px){
+    body{
+        max-width: 300px;
+        background-color: azure;
+    }
+}
